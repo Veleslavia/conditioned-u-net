@@ -1,4 +1,4 @@
-## Conditioned Source Separation for MusicInstrument Performances
+## Conditioned Source Separation for Music Instrument Performances
 #### Olga Slizovskaia, Gloria Haro, Emilia Gómez
 #### Department of Information and Communication Technologies, Pompeu Fabra University, Barcelona, Spain
 
