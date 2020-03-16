@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Conditioned Source Separation for MusicInstrument Performances
+#### Olga Slizovskaia, Gloria Haro, Emilia Gómez
+#### Department of Information and Communication Technologies, Pompeu Fabra University, Barcelona, Spain
 
-You can use the [editor on GitHub](https://github.com/Veleslavia/conditioned-u-net/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Separating different music instruments playing the same piece is a challenging task since the different audio sources are synchronized and playing in harmony. Moreover, the number of sources may vary for each piece and some of the sources may belong to the same family of instruments, thus sharing timbral characteristics and making the sources more correlated.
+This paper proposes a source separation method for multiple musical instruments sounding simultaneously and explores how much additional information apart from the audio stream can lift the quality of source separation. We explore conditioning techniques at different levels of a primary source separation network and utilize two extra modalities of data, namely presence or absence of instruments in the mixture, and the corresponding video stream data.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<img src='u-net-all.png' align="center" width=650>
 
-### Markdown
+If you find our code or project useful in your research, please cite:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Veleslavia/conditioned-u-net/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+     @inproceedings{slizovskaia2020conditioned,
+       title = {Conditioned Source Separation for Music Instrument Performances},
+       author = {Slizovskaia, Olga and Haro, Gloria and G{\'o}mez Emilia},
+       booktitle = {tba},
+       year = {2020}
+     }
