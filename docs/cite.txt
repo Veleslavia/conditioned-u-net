@@ -1,0 +1,6 @@
+ @inproceedings{slizovskaia2020conditioned,
+   title = {Conditioned Source Separation for Music Instrument Performances},
+   author = {Slizovskaia, Olga and Haro, Gloria and G{\'o}mez Emilia},
+   booktitle = {tba},
+   year = {2020}
+ }
