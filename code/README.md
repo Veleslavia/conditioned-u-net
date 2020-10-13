@@ -7,8 +7,8 @@ In order to use this code, clone the repo and install the requirements listed in
 
 This repo requires two datasets which should be downloaded and pre-processed separately
 
-* Solos
-* URMP
+* Solos: A Dataset for Audio-Visual Music Source Separation and Localization [Solos](https://www.juanmontesinos.com/Solos/)
+* University of Rochester Multi-modal Music Performance (URMP) Dataset [URMP](http://www2.ece.rochester.edu/projects/air/projects/URMP.html)
 
 ## Training new models
 
