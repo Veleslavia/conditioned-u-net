@@ -231,6 +231,9 @@ class ModelActionPipeline:
                     if self.exp_config.with_lstm:
                         nn.utils.clip_grad_norm_(self.model.parameters(), 0.5)
                     self.optimizer.step()
+                    if (epoch == 0) and (num_it == 0):
+                        self.optimizer = optim.Adam(self.model.parameters(), lr=self.exp_config.init_lr,
+                                                    weight_decay=0.0005)
 
                 if aux_loss:
                     aux_loss = aux_loss / aux_loss_weight

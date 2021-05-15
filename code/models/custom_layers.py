@@ -25,6 +25,7 @@ class DynamicFC(nn.Module):
 
         self.activation = None
         self.linear = None
+        self.initialized = False
 
     def forward(self, embedding, out_planes=1, activation=None, use_bias=True):
         """
@@ -41,17 +42,20 @@ class DynamicFC(nn.Module):
         self.out_planes = out_planes
         self.use_bias = use_bias
 
-        self.linear = nn.Linear(self.in_planes, self.out_planes, bias=use_bias).cuda()
-        if activation == 'relu':
-            self.activation = nn.ReLU(inplace=True).cuda()
-        elif activation == 'tanh':
-            self.activation = nn.Tanh().cuda()
+        if not self.initialized:
+            self.linear = nn.Linear(self.in_planes, self.out_planes, bias=use_bias).cuda()
+            if activation == 'relu':
+                self.activation = nn.ReLU(inplace=True).cuda()
+            elif activation == 'tanh':
+                self.activation = nn.Tanh().cuda()
 
-        for m in self.modules():
-            if isinstance(m, nn.Linear):
-                nn.init.xavier_uniform_(m.weight)
-                if self.use_bias:
-                    nn.init.constant_(m.bias, 0.1)
+            for m in self.modules():
+                if isinstance(m, nn.Linear):
+                    nn.init.xavier_uniform_(m.weight)
+                    print("initialize conditioning")
+                    if self.use_bias:
+                        nn.init.constant_(m.bias, 0.1)
+            self.initialized = True
 
         out = self.linear(embedding)
         if self.activation is not None:
